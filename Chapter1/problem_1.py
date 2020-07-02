@@ -1,3 +1,5 @@
+
+#--------------Brute Force -------------
 # string = "ab"
 # isUnique = True
 
@@ -18,4 +20,21 @@
 # else: 
 #     print("String is not Unique")
 
+# -------------------------------------------------
 
+#--------------Using Set (Hash Table) -------------
+string = "aBbcd"
+isStringUnique = True
+#Edge Case: check if the string has a whitespace
+for char in string:
+    if char == " ": 
+        string = string.replace(" ", "")
+
+if len(set(string)) == len(string) : 
+    isStringUnique = True 
+else: 
+    isStringUnique = False
+
+print(isStringUnique)
+
+# -------------------------------------------------
