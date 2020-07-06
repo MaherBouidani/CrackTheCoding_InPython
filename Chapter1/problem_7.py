@@ -1,3 +1,5 @@
-str_new = '' + str(2)
 
-print(str_new)
+a ="avc"
+
+if len(a) - 1 == 2:
+    print("kajjfj")
