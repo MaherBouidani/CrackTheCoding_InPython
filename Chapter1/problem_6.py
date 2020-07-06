@@ -22,6 +22,21 @@ print(string_compression("bcCcdef"))
 
 #---------------
 
+def string_compression(string):
+    chars_list = [0] * 128
+    str_new = ""
+    for letter in string: 
+        chars_list[ord(letter)] += 1
+    
+    print(chars_list)
+    for index, char in enumerate(chars_list):
+        if char > 0:
+            str_new += chr(index) + str(char)
+    
+    return str_new
+    
+
+print(string_compression("abbcccdddd"))
             
                 
             
