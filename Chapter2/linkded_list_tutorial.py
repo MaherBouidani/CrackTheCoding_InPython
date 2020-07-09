@@ -28,6 +28,18 @@ class Head:
             current.next = newNode
         else:
             self.headPointer = newNode
+    
+    def search_list(self, search_value):
+        current = self.headPointer
+        count = 1
+        while current:
+            if current.data == search_value:
+                return True, count
+            current = current.next
+            count += 1 
+        return False
+    
+    def remove_item(self, )
 
     def list_length(self):
         count = 0
@@ -55,7 +67,7 @@ for data in [1,2,3,7]:
 linked_list_head.print()
 linked_list_head.list_length()
 
-
+print(linked_list_head.search_list(8))
 
 
 
