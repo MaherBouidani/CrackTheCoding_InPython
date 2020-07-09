@@ -39,7 +39,27 @@ class Head:
             count += 1 
         return False
     
-    def remove_item(self, )
+    def remove_item(self, node_id):
+        current = self.headPointer
+        prev_node = None
+        current_id = 1
+
+        while current:
+        
+            if current_id== node_id:
+                if prev_node is not None: 
+                    prev_node.next = current.next
+                    return  
+                else: 
+                    self.headPointer = current.next
+                    return "empty", self.headPointer   
+            prev_node = current
+            current = current.next
+            current_id += 1 
+        
+        
+            
+
 
     def list_length(self):
         count = 0
@@ -55,20 +75,22 @@ linked_list_head = Head()
 # first_node = Node(1)
 # second_node = Node(2)
 # third_node = Node(3)
+
 # first_node.next = second_node
 # second_node.next = third_node
 # linked_list_head.headPointer = first_node
 
 # linked_list_head.insert_node_atEnd(7)
 
-for data in [1,2,3,7]:
+for data in [8]:
     linked_list_head.insert_node_atEnd(data)
 
 linked_list_head.print()
 linked_list_head.list_length()
 
-print(linked_list_head.search_list(8))
-
+# print(linked_list_head.search_list(8))
+print(linked_list_head.remove_item(1))
+linked_list_head.print()
 
 
 
