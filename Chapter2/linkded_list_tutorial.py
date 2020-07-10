@@ -82,7 +82,7 @@ linked_list_head = Head()
 
 # linked_list_head.insert_node_atEnd(7)
 
-for data in [8]:
+for data in [8,4,5,6,7]:
     linked_list_head.insert_node_atEnd(data)
 
 linked_list_head.print()
