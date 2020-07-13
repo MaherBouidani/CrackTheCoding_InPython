@@ -33,6 +33,22 @@ class SingleLinkedList:
 
         return node.data
 
+    
+    def circular_detection(self):
+        current = self.head
+
+        while current:
+            runner_pointer = current.next
+            while runner_pointer:
+                if current.data == runner_pointer.data:
+                   
+                
+
+                runner_pointer = runner_pointer.next
+            
+            current = current.next
+    
+
    
 
  #NOTE1: or using append, **** BE CAREFUL IN PYTHON****: concat + only applies on the same type. Example: TypeError for concat two different types int and list           
@@ -54,5 +70,6 @@ for item in ['A','B','C','D','E']:
 print(ll.print_ll())
 
 
-print(ll.circular(4))
+print(ll.circular(3))
 
+print(ll.circular_detection())
