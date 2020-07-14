@@ -35,18 +35,26 @@ class SingleLinkedList:
 
     
     def circular_detection(self):
-        current = self.head
+        fast = self.head
+        slow = self.head
 
-        while current:
-            runner_pointer = current.next
-            while runner_pointer:
-                if current.data == runner_pointer.data:
-                   
-                
+        while fast is not None and fast.next is not None: 
+            slow = slow.next
+            fast = fast.next.next
 
-                runner_pointer = runner_pointer.next
-            
-            current = current.next
+            if slow == fast:
+               
+                break
+ 
+        
+        slow = self.head
+        while slow != fast: 
+            slow = slow.next
+            fast = fast.next
+        
+        return fast.data
+        
+        
     
 
    
