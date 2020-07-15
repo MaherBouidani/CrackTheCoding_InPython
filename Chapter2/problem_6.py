@@ -64,6 +64,34 @@ class SingleLinkedList:
             prev = prev- 1  
         
         return True
+    
+    def is_palindrome_sol3 (self):
+        current = self.head
+
+        list_ll = []
+
+        while current: 
+            list_ll += [current.data]
+            current = current.next
+        i = 0
+        j = len(list_ll) - 1
+        while i < len(list_ll) and j >= 0:
+            if list_ll[i] == list_ll[j]:
+                pass
+            else: 
+                return False
+
+
+            i += 1
+            j -= 1
+
+
+        while i < j and list_ll[i] == list_ll[j]:
+            
+        
+        return True
+
+
 
 
         
@@ -76,9 +104,9 @@ class SingleLinkedList:
 
 ll = SingleLinkedList()
 
-for item in ['M','A','H','E', 'R']:
+for item in ['M',' ', ' ', 'M']:
     ll.add_node(item)
 print(ll.print_ll())
 
-print(ll.is_palindrome_sol2())
+print(ll.is_palindrome_sol3())
 
