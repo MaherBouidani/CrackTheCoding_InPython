@@ -1,8 +1,11 @@
 
+def statdov():
 
-items = [1,2,3]
+    lis = [1,2,3]
 
-items2 =  [3,4,2]
+    def recuresive(i,j):
+        print(lis[i], lis[j])
+    
+    recuresive(0,1)
 
-print(id(items[1]))
-print(id(items2[2]))
+statdov()
