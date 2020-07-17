@@ -38,7 +38,7 @@ def string_permutation_check(string1, string2):
     for letter in string1:
         letters[ord(letter)] += 1
 
-    for index in range(len(string2)-1, -1, -1):    # or using reversed(): reversed(range(len(string2)))
+    for index in range(len(string2)-1, -1, -1):    # or using reversed(): reversed(range(len(string2))) Note: Reversed is for seq iterators ! it is NOT reversing the list itslef
         letters[ord(string2[index])] -= 1
 
         if letters[ord(string2[index])] < 0:
