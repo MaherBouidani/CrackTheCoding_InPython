@@ -3,16 +3,22 @@ class Stack:
     def __init__(self, stack_size):
         self.list = []
         self.stack_size = stack_size
+    
 
 
     def stack_length(self):
         return len(self.list)
 
-    def push(self, data):
+    
+
+    def push(self,  data):
+      
         if self.is_full():
             raise Exception('stack is full')
         self.list += [data]
+        
         return self.list
+
 
     def pop(self):
         if self.is_empty():
@@ -36,22 +42,10 @@ class Stack:
 
 stack = Stack(4)
 
-for item in [1,2,3,4]:
+for item in [10,1,3,10]:
     stack.push(item)
 
-print(stack.pop()) 
 
-print(stack.list)
-
-print(stack.peek())
-
-print(stack.list)
-
-stack.push(5)
-
-print(stack.list)
-
-stack.push(3)
 
     
 
