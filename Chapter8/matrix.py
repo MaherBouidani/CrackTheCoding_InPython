@@ -22,27 +22,27 @@
 #            time.sleep(0.1)
 #            print(num,end=' ')
 
+print(pow(2,31) -1 )
+# lis = [1]* 1000000
 
-lis = [1]* 1000000
-
-sum = 0 
-def sum_recursive(lis, sum):
+# sum = 0 
+# def sum_recursive(lis, sum):
     
-    chr_string = lis[0]
+#     chr_string = lis[0]
 
-    sum += ord(str(chr_string))
-    substr = lis[1:]
+#     sum += ord(str(chr_string))
+#     substr = lis[1:]
 
-    if len(substr) == 0:
+#     if len(substr) == 0:
 
-        return sum
+#         return sum
 
-    else: 
+#     else: 
 
-        return sum_recursive(substr, sum)
+#         return sum_recursive(substr, sum)
 
 
-print(sum_recursive(lis, sum))
+# print(sum_recursive(lis, sum))
 
 
 

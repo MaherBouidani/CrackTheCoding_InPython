@@ -57,33 +57,70 @@
 
 
 
-def is_palindrome(string):
+# def is_palindrome(string):
 
-    table = [0] * 128
+#     table = [0] * 128
 
-    for letter in string:
-        table[ord(letter)] += 1 
+#     for letter in string:
+#         table[ord(letter)] += 1 
 
     
-    return check_max_odd_num(table)
+#     return check_max_odd_num(table)
 
 
-def check_max_odd_num(table):
-    index = 0
+# def check_max_odd_num(table):
+#     index = 0
 
-    for element in table:
+#     for element in table:
         
-        if element % 2 == 1:
-            if index ==1:
-                return False
+#         if element % 2 == 1:
+#             if index ==1:
+#                 return False
 
-            index += 1 
+#             index += 1 
 
 
+#     return True
+
+
+def get_perm(string):
+
+
+    ascii_list = [0] * 128
+
+    string = string.lower()
+
+    foundOdd = False
+
+    for letter in string:
+        if letter != " ":
+           ascii_list[ord(letter)] +=1
+    
+ 
+
+    for item in ascii_list:
+        if item == 0:
+            continue
+        else:
+            if item % 2 == 1:
+                if foundOdd:
+                    return False
+                foundOdd = True
+    
     return True
 
 
-print(is_palindrome("tactcoa"))
+
+    
+
+
+
+
+
+    
+    
+
+print(get_perm("Tact oa"))
 
 
 
